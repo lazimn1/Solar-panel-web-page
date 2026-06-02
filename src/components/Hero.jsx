@@ -62,10 +62,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-solar-400/10 border border-solar-400/30 rounded-full text-solar-300 text-sm font-semibold mb-8 backdrop-blur-sm">
-          <span className="w-2 h-2 bg-solar-400 rounded-full animate-pulse" />
-          #1 Rated Solar Company in North America
-        </div>
 
         {/* Heading */}
         <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-6 leading-[1.05]">
@@ -74,18 +70,14 @@ export default function Hero() {
         </h1>
 
         <p className="text-slate-300 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
-          Cut your electricity bills by up to <span className="text-solar-400 font-bold">90%</span> with our cutting-edge solar panel systems. 
+          Cut your electricity bills by up to <span className="text-blue-500 font-bold">90%</span> with our cutting-edge solar panel systems. 
           Clean energy, smarter savings, brighter future.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a href="#contact" className="btn-primary text-lg group">
-            Get Free Quote
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
           <a href="#services" className="btn-secondary text-lg">
-            <Play className="w-5 h-5 text-solar-400" />
+            <Play className="w-5 h-5 text-blue-400" />
             Watch How It Works
           </a>
         </div>
@@ -98,30 +90,11 @@ export default function Hero() {
         </div>
 
         {/* Floating solar panel illustration */}
-        <div className="relative mt-20 max-w-4xl mx-auto animate-float">
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 pointer-events-none" />
-          <div className="grid grid-cols-4 gap-3 p-6 bg-white/5 backdrop-blur rounded-3xl border border-white/10 glow-solar">
-            {Array.from({ length: 8 }, (_, i) => (
-              <div key={i} className={`h-16 rounded-xl flex items-center justify-center text-2xl relative overflow-hidden ${
-                i % 3 === 0 ? 'bg-sky-800/60' : i % 3 === 1 ? 'bg-sky-900/60' : 'bg-slate-800/60'
-              } border border-sky-700/30`}>
-                <div className="absolute inset-0 grid grid-cols-3 gap-px opacity-40">
-                  {Array.from({length: 9}).map((_, j) => <div key={j} className="bg-sky-600/20 rounded-sm" />)}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-slate-500 text-xs tracking-widest uppercase">
-            Solar Panel Array — 10kW System
-          </div>
-        </div>
+        
       </div>
 
       {/* Scroll indicator */}
-      <a href="#services" className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 hover:text-solar-400 transition-colors animate-bounce">
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <ChevronDown className="w-5 h-5" />
-      </a>
+      
     </section>
   );
 }
