@@ -75,7 +75,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="text-solar-400 font-semibold text-sm tracking-widest uppercase mb-4 block">Testimonials</span>
+          <span className="text-white font-semibold text-sm tracking-widest uppercase mb-4 block">Reviews</span>
           <h2 className="section-heading">
             What Our <span className="gradient-text">Customers Say</span>
           </h2>
@@ -105,7 +105,7 @@ export default function Testimonials() {
 
           {/* Controls */}
           <div className="flex items-center justify-center gap-4 mt-10">
-            <button onClick={prev} className="p-3 rounded-full bg-white/10 hover:bg-solar-400/20 border border-white/10 hover:border-solar-400/40 transition-all hover:scale-110 active:scale-95">
+            <button onClick={prev} className="p-3 rounded-full bg-white/10 hover:bg-blue-400/20 border border-white/10 hover:border-blue-400/40 transition-all hover:scale-110 active:scale-95">
               <ChevronLeft className="w-5 h-5 text-white" />
             </button>
             <div className="flex gap-2">
@@ -113,22 +113,18 @@ export default function Testimonials() {
                 <button
                   key={i}
                   onClick={() => setIdx(i)}
-                  className={`rounded-full transition-all duration-300 ${i === idx ? 'w-8 h-2.5 bg-solar-400' : 'w-2.5 h-2.5 bg-white/20 hover:bg-white/40'}`}
+                  className={`rounded-full transition-all duration-300 ${i === idx ? 'w-8 h-2.5 bg-blue-400' : 'w-2.5 h-2.5 bg-white/20 hover:bg-white/40'}`}
                 />
               ))}
             </div>
-            <button onClick={next} className="p-3 rounded-full bg-white/10 hover:bg-solar-400/20 border border-white/10 hover:border-solar-400/40 transition-all hover:scale-110 active:scale-95">
+            <button onClick={next} className="p-3 rounded-full bg-white/10 hover:bg-blue-400/20 border border-white/10 hover:border-blue-400/40 transition-all hover:scale-110 active:scale-95">
               <ChevronRight className="w-5 h-5 text-white" />
             </button>
           </div>
         </div>
 
         {/* Trust bar */}
-        <div className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60">
-          {['FORBES', 'BLOOMBERG', 'CNBC', 'CLEAN ENERGY COUNCIL', 'SEIA'].map(brand => (
-            <span key={brand} className="font-display font-black text-slate-500 tracking-widest text-sm">{brand}</span>
-          ))}
-        </div>
+        
       </div>
     </section>
   );
@@ -153,10 +149,7 @@ function TestimonialCard({ t }) {
           <div className="text-slate-500 text-xs">{t.role}</div>
         </div>
       </div>
-      <div className="flex gap-2">
-        <span className="px-2.5 py-1 bg-solar-400/10 text-solar-400 text-xs font-semibold rounded-lg">{t.savings}</span>
-        <span className="px-2.5 py-1 bg-white/5 text-slate-400 text-xs rounded-lg">{t.system}</span>
-      </div>
+      
     </div>
   );
 }

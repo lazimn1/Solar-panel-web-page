@@ -172,9 +172,9 @@ export default function Services() {
   return (
     <section id="services" className="py-10 relative">
       {/* Decorative Line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-blue-500/50" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-blue-500/50 " />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         {/* Header */}
         <div className="text-center mb-10">
           <span className="font-semibold text-sm tracking-widest uppercase mb-4 block">

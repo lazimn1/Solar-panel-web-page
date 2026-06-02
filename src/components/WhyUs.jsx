@@ -201,22 +201,22 @@ export default function WhyUs() {
                 key={r.title}
                 ref={el => itemRefs.current[i] = el}
                 // width is 85vw on mobile to peek adjacent slides, auto-sized by grid on desktop
-                className={`shrink-0 w-[85vw] sm:w-[360px] md:w-auto snap-center md:snap-align-none relative p-6 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/8 hover:border-solar-400/30 transition-all duration-700 overflow-hidden ${
+                className={`shrink-0 w-[85vw] sm:w-[360px] md:w-auto snap-center md:snap-align-none relative p-6 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/8 hover:border-solar-300/30 transition-all duration-700 overflow-hidden ${
                   visible[i] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 {/* Stat watermark */}
-                <div className="absolute -right-4 -top-4 font-display font-black text-6xl text-white/5 select-none group-hover:text-white/10 transition-colors pointer-events-none">
+                <div className="absolute -right-4 -top-4 font-display font-black text-6xl text-white select-none group-hover:text-white/10 transition-colors pointer-events-none">
                   {r.stat}
                 </div>
 
                 <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-solar-400/20 to-solar-600/20 border border-solar-400/20 flex items-center justify-center flex-shrink-0 group-hover:border-solar-400/50 transition-colors pointer-events-none">
-                    <Icon className="w-6 h-6 text-solar-400" strokeWidth={1.5} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400/20 to-solar-blue/20 border border-blue-400/20 flex items-center justify-center flex-shrink-0 group-hover:border-blue-400/50 transition-colors pointer-events-none">
+                    <Icon className="w-6 h-6 text-blue-400" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-lg text-white mb-2 group-hover:text-solar-300 transition-colors">{r.title}</h3>
+                    <h3 className="font-display font-bold text-lg text-white mb-2 mt-3 group-hover:text-solar-300 transition-colors">{r.title}</h3>
                     <p className="text-slate-400 text-sm leading-relaxed">{r.desc}</p>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ export default function WhyUs() {
                 onClick={() => scrollTo(i)}
                 className={`h-2 rounded-full transition-all duration-500 ${
                   activeIndex === i 
-                    ? 'w-8 bg-solar-400 shadow-[0_0_10px_rgba(250,204,21,0.3)]' 
+                    ? 'w-4 bg-blue-400 shadow-[0_0_10px_rgba(250,204,21,0.3)]' 
                     : 'w-2 bg-white/20 hover:bg-white/40'
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
@@ -251,6 +251,7 @@ export default function WhyUs() {
           </div>
         )}
       </div>
+      <hr className="mt-20 border-t border-slate-700" />
     </section>
   );
 }
