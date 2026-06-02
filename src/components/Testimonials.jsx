@@ -69,7 +69,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-28 relative overflow-hidden">
+    <section id="testimonials" className="py-1 pb-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-solar-950/20 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
