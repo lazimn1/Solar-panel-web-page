@@ -64,21 +64,20 @@ export default function Hero() {
         {/* Badge */}
 
         {/* Heading */}
-        <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-6 leading-[1.05]">
+        <h1 className="font-display font-black text-3xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-6 leading-[1.05]">
           Power Your World<br />
           <span className="gradient-text">With Pure Sunlight</span>
         </h1>
 
-        <p className="text-slate-300 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
-          Cut your electricity bills by up to <span className="text-blue-5`00 font-bold">90%</span> with our cutting-edge solar panel systems. 
-          Clean energy, smarter savings, brighter future.
+        <p className="text-slate-300 text-xs sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed">
+          Cut your electricity bills by up to <span className="text-blue-500 font-bold">90%</span> with our cutting-edge solar panel systems.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a href="#services" className="btn-secondary text-lg">
-            <Play className="w-5 h-5 text-blue-400" />
-            Watch How It Works
+        <div className="flex flex-col sm:flex-row justify-center items-center mb-10">
+          <a href="#services" className="btn-secondary text-sm">
+            <Play className="w-4 h-4 text-blue-400" />
+            Our Services
           </a>
         </div>
 

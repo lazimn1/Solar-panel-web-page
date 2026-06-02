@@ -36,7 +36,7 @@ function Counter({ target, suffix }) {
 
 export default function Stats() {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-5 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-solar-900/20 via-sky-900/10 to-solar-900/20" />
       <div className="absolute inset-0 border-y border-white/5" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
