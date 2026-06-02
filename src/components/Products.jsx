@@ -74,12 +74,12 @@ export default function Products() {
   const [hoveredIdx, setHoveredIdx] = useState(1);
 
   return (
-    <section id="products" className="py-28 relative">
+    <section id="products" className="py-5 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sky-950/20 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="text-solar-400 font-semibold text-sm tracking-widest uppercase mb-4 block">Our Products</span>
+          <span className="text-white font-semibold text-sm tracking-widest uppercase mb-4 block">Our Products</span>
           <h2 className="section-heading">
             Choose Your <span className="gradient-text">Solar Package</span>
           </h2>
@@ -160,12 +160,9 @@ export default function Products() {
         </div>
 
         {/* Bottom note */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-14 text-slate-500 text-sm">
-          {['🏦 0% finance available', '📋 No hidden fees', '🏛️ Rebate assistance included', '⚡ Grid connect approved'].map(note => (
-            <span key={note}>{note}</span>
-          ))}
-        </div>
+        
       </div>
+      <hr className="mt-20 border-t border-slate-700" />
     </section>
   );
 }

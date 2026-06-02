@@ -46,7 +46,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-fit flex items-center justify-center overflow-hidden">
       {/* Background layers */}
       <div className="absolute inset-0 bg-hero-gradient" />
       <div className="absolute inset-0 bg-gradient-radial from-solar-900/20 via-transparent to-transparent" />

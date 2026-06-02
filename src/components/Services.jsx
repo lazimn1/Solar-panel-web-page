@@ -170,7 +170,7 @@ function ServiceCard({ service, index }) {
 // Services Section with Swiper (Mobile) and Grid (Desktop)
 export default function Services() {
   return (
-    <section id="services" className="py-28 relative">
+    <section id="services" className="py-10 relative">
       {/* Decorative Line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-blue-500/50" />
 
