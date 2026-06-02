@@ -70,7 +70,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-slate-300 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
-          Cut your electricity bills by up to <span className="text-blue-500 font-bold">90%</span> with our cutting-edge solar panel systems. 
+          Cut your electricity bills by up to <span className="text-blue-5`00 font-bold">90%</span> with our cutting-edge solar panel systems. 
           Clean energy, smarter savings, brighter future.
         </p>
 
