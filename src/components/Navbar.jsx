@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Sun, Menu, X, Phone } from 'lucide-react';
+import logo from '../assets/Company-Logo.png';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -30,16 +31,19 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-solar-400 rounded-full blur-md opacity-60 group-hover:opacity-100 transition-opacity" />
-              <div className="relative bg-gradient-to-br from-solar-300 to-solar-600 p-2 rounded-full">
-                <Sun className="w-6 h-6 text-slate-900" strokeWidth={2.5} />
+            <div>
+              <div className="flex items-center justify-between bg-blue-950 shadow rounded-xl">
+                <img
+                  src={logo}
+                  alt="AM Solar World Logo"
+                  className="h-16 w-16"
+                />
               </div>
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-xl text-white tracking-tight">SolarVolt</span>
-              <span className="text-solar-400 text-[10px] font-semibold tracking-widest uppercase">Energy Solutions</span>
-            </div>
+            <div className="flex flex-col leading-tight text-center">
+              <span className="font-serif text-xl text-white tracking-tight">AM SOLAR WORLD</span>
+              <span className="text-slate-400 text-[10px] font-semibold tracking-widest uppercase">We Always Give You Batter Way</span>
+            </div> 
           </a>
 
           {/* Desktop nav */}
@@ -51,12 +55,9 @@ export default function Navbar() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <a href="tel:+18005678910" className="hidden md:flex items-center gap-2 text-solar-400 hover:text-solar-300 transition-colors text-sm font-semibold">
+            <a href="tel:+18005678910" className="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold">
               <Phone className="w-4 h-4" />
-              <span>1-800-SOLAR</span>
-            </a>
-            <a href="#contact" className="hidden md:inline-flex btn-primary py-2.5 px-5 text-sm rounded-lg">
-              Get Free Quote
+              <span>1-800-878588</span>
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -82,9 +83,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setIsOpen(false)} className="btn-primary mt-4 justify-center">
-            Get Free Quote
-          </a>
         </div>
       </div>
     </nav>

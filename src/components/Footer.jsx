@@ -21,28 +21,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/10 bg-slate-950/80">
       {/* Newsletter strip */}
-      <div className="border-b border-white/10 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="font-display font-bold text-xl text-white">Stay in the Loop ☀️</h3>
-            <p className="text-slate-400 text-sm mt-1">Get solar tips, rebate alerts, and exclusive offers straight to your inbox.</p>
-          </div>
-          <form
-            onSubmit={e => e.preventDefault()}
-            className="flex gap-2 w-full md:w-auto"
-          >
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 md:w-72 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-solar-400/60 transition-all text-sm"
-            />
-            <button type="submit" className="btn-primary py-3 px-5 text-sm whitespace-nowrap">
-              Subscribe <ArrowRight className="w-4 h-4" />
-            </button>
-          </form>
-        </div>
-      </div>
-
+      
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">

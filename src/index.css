@@ -33,7 +33,7 @@
     @apply bg-gradient-to-r from-solar-300 via-solar-400 to-amber-300 bg-clip-text text-transparent;
   }
   .nav-link {
-    @apply text-slate-300 hover:text-solar-400 transition-colors duration-200 font-medium text-sm relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-solar-400 after:transition-all after:duration-300 hover:after:w-full;
+    @apply text-slate-300 hover:text-blue-400 transition-colors duration-200 font-medium text-sm relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-700 after:transition-all after:duration-300 hover:after:w-full;
   }
 }
 
