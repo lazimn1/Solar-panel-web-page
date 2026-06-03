@@ -3,7 +3,6 @@ import { useState, useEffect, useCallback } from "react";
 const slides = [
   {
     id: 1,
-    // Cropped vertically for mobile (1080x1920)
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1080&h=1920&q=80",
     tag: "Clean Energy",
     headline: "Powering the\nFuture",
@@ -11,7 +10,6 @@ const slides = [
   },
   {
     id: 2,
-    // Close-up shot of solar panels that looks great vertically
     image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1080&h=1920&q=80",
     tag: "Residential Solutions",
     headline: "Smart Homes\nSmart Power",
@@ -19,7 +17,6 @@ const slides = [
   },
   {
     id: 3,
-    // Industrial/Commercial scale solar farm
     image: "https://images.unsplash.com/photo-1584226761916-3fd67ab5ac3a?auto=format&fit=crop&w=1080&h=1920&q=80",
     tag: "Commercial Solar",
     headline: "Empowering\nBusinesses",
@@ -27,7 +24,6 @@ const slides = [
   },
   {
     id: 4,
-    // Warm sunset over a solar array
     image: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1080&h=1920&q=80",
     tag: "Sustainable Vision",
     headline: "A Brighter\nTomorrow",
@@ -40,6 +36,12 @@ export default function Hero1() {
   const [animating, setAnimating] = useState(false);
   const [direction, setDirection] = useState("next");
   const [paused, setPaused] = useState(false);
+
+  // Swipe state
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
 
   const goTo = useCallback(
     (index, dir = "next") => {
@@ -62,6 +64,33 @@ export default function Hero1() {
     goTo((current - 1 + slides.length) % slides.length, "prev");
   }, [current, goTo]);
 
+  // Touch Handlers
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    setPaused(true); // Pause auto-play while interacting
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    setPaused(false); // Resume auto-play after interaction
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      next(); // Swipe left to see the next slide
+    }
+    if (isRightSwipe) {
+      prev(); // Swipe right to see the previous slide
+    }
+  };
+
   useEffect(() => {
     if (paused) return;
     const timer = setInterval(next, 5000);
@@ -76,6 +105,9 @@ export default function Hero1() {
       style={{ height: "100svh", minHeight: "580px", fontFamily: "'Cormorant Garamond', Georgia, serif" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Slides */}
       {slides.map((s, i) => (
@@ -92,15 +124,16 @@ export default function Hero1() {
               transform: i === current && !animating ? "scale(1.04)" : "scale(1)",
               transition: "transform 6s ease",
             }}
+            draggable={false} // Prevents image drag ghosting on swipe
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
+          
         </div>
       ))}
 
       {/* Content */}
       <div
-        className="absolute inset-0 z-10 flex flex-col justify-end px-8 sm:px-16 pb-24 sm:pb-20"
+        className="absolute inset-0 z-10 flex flex-col justify-end px-8 sm:px-16 pb-24 sm:pb-20 pointer-events-none"
         style={{
           opacity: animating ? 0 : 1,
           transform: animating
@@ -109,42 +142,44 @@ export default function Hero1() {
           transition: "opacity 0.4s ease, transform 0.4s ease",
         }}
       >
-        {/* Tag pill */}
-        <div className="flex items-center gap-2 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 block" />
-          <span
-            className="text-xs text-amber-400/80 tracking-[0.3em] uppercase"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+        <div className="pointer-events-auto">
+          {/* Tag pill */}
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 block" />
+            <span
+              className="text-xs text-blue-400/80 tracking-[0.3em] uppercase"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              {slide.tag}
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h2
+            className="text-[clamp(42px,7vw,96px)] font-normal text-white leading-[0.92] mb-5 whitespace-pre-line"
           >
-            {slide.tag}
-          </span>
+            {slide.headline}
+          </h2>
+
+          {/* Subtext */}
+          <p
+            className="text-sm sm:text-base text-stone-300 max-w-sm leading-relaxed mb-8"
+            style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
+          >
+            {slide.sub}
+          </p>
         </div>
-
-        {/* Headline */}
-        <h2
-          className="text-[clamp(42px,7vw,96px)] font-normal text-white leading-[0.92] mb-5 whitespace-pre-line"
-        >
-          {slide.headline}
-        </h2>
-
-        {/* Subtext */}
-        <p
-          className="text-sm sm:text-base text-stone-300 max-w-sm leading-relaxed mb-8"
-          style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-        >
-          {slide.sub}
-        </p>
       </div>
 
       {/* Slide counter + progress */}
-      <div className="absolute bottom-8 right-8 sm:right-16 z-20 flex flex-col items-end gap-3">
+      <div className="absolute bottom-8 right-8 sm:right-16 z-20 flex flex-col items-end gap-3 pointer-events-none">
         <span
-          className="text-xs text-white/40 tabular-nums"
+          className="text-xs text-white/40 tabular-nums pointer-events-auto"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
           {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
         </span>
-        <div className="flex gap-1.5">
+        <div className="flex gap-1.5 pointer-events-auto">
           {slides.map((_, i) => (
             <button
               key={i}
@@ -154,15 +189,15 @@ export default function Hero1() {
               style={{
                 width: i === current ? "24px" : "6px",
                 height: "6px",
-                background: i === current ? "#f59e0b" : undefined, // amber-500
+                background: i === current ? "blue" : undefined, // blue-500
               }}
             />
           ))}
         </div>
       </div>
 
-      {/* Prev / Next arrow buttons */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-8 z-20">
+      {/* Prev / Next arrow buttons (hidden on smaller mobile screens, but visible on tablets/desktop) */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-8 z-20 hidden sm:block">
         <button
           onClick={prev}
           aria-label="Previous slide"
@@ -173,7 +208,7 @@ export default function Hero1() {
           </svg>
         </button>
       </div>
-      <div className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-8 z-20">
+      <div className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-8 z-20 hidden sm:block">
         <button
           onClick={next}
           aria-label="Next slide"
@@ -187,7 +222,7 @@ export default function Hero1() {
 
       {/* Top brand tag */}
       <div className="absolute top-6 left-8 sm:left-16 z-20 flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-amber-600 block" />
+        <span className="w-2 h-2 rounded-full bg-blue-600 block" />
         <span
           className="text-sm text-white/60 tracking-[0.2em] uppercase"
           style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -198,7 +233,7 @@ export default function Hero1() {
 
       {/* Pause indicator */}
       {paused && (
-        <div className="absolute top-6 right-8 sm:right-16 z-20">
+        <div className="absolute top-6 right-8 sm:right-16 z-20 pointer-events-none">
           <span
             className="text-[10px] text-white/30 tracking-widest uppercase"
             style={{ fontFamily: "'DM Sans', sans-serif" }}

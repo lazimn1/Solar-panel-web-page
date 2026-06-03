@@ -25,7 +25,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
         ? 'bg-gradient-to-r from-black/60 via-blue-950/80 to-black/60 backdrop-blur border-b border-white/10 shadow-lg'
-        : 'backdrop-blur-sm  bg-black/20 border-b border-transparent'
+        : 'backdrop-blur-sm  bg-black/60 border-b border-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -41,8 +41,8 @@ export default function Navbar() {
               </div>
             </div>
             <div className="flex flex-col leading-tight text-center">
-              <span className="font-bold text-xl text-white tracking-tight">AM SOLAR WORLD</span>
-              <span className="text-slate-400 text-[10px] font-semibold tracking-widest uppercase">Always Give Better Way</span>
+              <span className="font-bold text-xl text-white tracking-tight">AM SOLAR <span className="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 bg-clip-text text-transparent">WORLD</span></span>
+              <span className="text-gray-200 text-[10px] font-semibold tracking-widest uppercase">Always Give Better Way</span>
             </div> 
           </a>
 
