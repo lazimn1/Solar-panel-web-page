@@ -1,7 +1,7 @@
 import { ArrowRight, Play, ChevronDown } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
-export default function Hero() {
+export default function Hero2() {
   const particlesRef = useRef(null);
 
   useEffect(() => {

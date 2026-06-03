@@ -24,8 +24,8 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
-        ? 'bg-black/50 backdrop-blur-3xl border-b border-white/10 shadow-xl shadow-black/30'
-        : 'bg-transparent'
+        ? 'bg-gradient-to-r from-black/60 via-blue-950/80 to-black/60 backdrop-blur border-b border-white/10 shadow-lg'
+        : 'backdrop-blur-sm  bg-black/20 border-b border-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -42,7 +42,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col leading-tight text-center">
               <span className="font-bold text-xl text-white tracking-tight">AM SOLAR WORLD</span>
-              <span className="text-slate-400 text-[10px] font-semibold tracking-widest uppercase">We Always Give You Batter Way</span>
+              <span className="text-slate-400 text-[10px] font-semibold tracking-widest uppercase">Always Give Better Way</span>
             </div> 
           </a>
 

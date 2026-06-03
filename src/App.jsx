@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import Hero1 from './components/Hero1';
+import Hero2 from './components/Hero2';
 import Stats from './components/Stats';
 import Services from './components/Services';
 import Products from './components/Products';
@@ -13,7 +14,8 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-950">
       <Navbar />
-      <Hero />
+      <Hero1 />
+      <Hero2 />
       <Stats />
       <Services />
       <Products />
