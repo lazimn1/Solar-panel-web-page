@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
-        ? 'bg-slate-950/90 backdrop-blur-xl border-b border-white/10 shadow-xl shadow-black/30'
+        ? 'bg-black/50 backdrop-blur-3xl border-b border-white/10 shadow-xl shadow-black/30'
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,16 +32,16 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
             <div>
-              <div className="flex items-center justify-between bg-blue-950 shadow rounded-xl">
+              <div className="flex items-center justify-between bg-white shadow rounded-xl">
                 <img
                   src={logo}
                   alt="AM Solar World Logo"
-                  className="h-16 w-16"
+                  className="object-contain max-h-auto w-16"
                 />
               </div>
             </div>
             <div className="flex flex-col leading-tight text-center">
-              <span className="font-serif text-xl text-white tracking-tight">AM SOLAR WORLD</span>
+              <span className="font-bold text-xl text-white tracking-tight">AM SOLAR WORLD</span>
               <span className="text-slate-400 text-[10px] font-semibold tracking-widest uppercase">We Always Give You Batter Way</span>
             </div> 
           </a>
