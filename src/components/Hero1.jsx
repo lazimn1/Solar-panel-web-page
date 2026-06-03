@@ -1,29 +1,62 @@
 import { useState, useEffect, useCallback } from "react";
+import image1 from '../assets/solar-installation.png';
+import image2 from '../assets/solar-farm.png';
+import image3 from '../assets/solar-rooftop.png';
+import image4 from '../assets/solar-closeup.png';
 
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1080&h=1920&q=80",
-    tag: "Clean Energy",
-    headline: "Powering the\nFuture",
-    sub: "Harnessing the power of the sun to create sustainable energy solutions for generations to come.",
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1080&h=1920&q=80",
+    image: image1,
     tag: "Residential Solutions",
     headline: "Smart Homes\nSmart Power",
     sub: "Transform your roof into a powerhouse. Reduce your carbon footprint and your energy bills.",
   },
   {
+    id: 2,
+    image: image2,
+    tag: "Clean Energy",
+    headline: "Powering the\nFuture",
+    sub: "Harnessing the power of the sun to create sustainable energy solutions for generations to come.",
+  },
+
+  {
     id: 3,
-    image: "https://images.unsplash.com/photo-1584226761916-3fd67ab5ac3a?auto=format&fit=crop&w=1080&h=1920&q=80",
+    image: image3,
     tag: "Commercial Solar",
     headline: "Empowering\nBusinesses",
     sub: "Scalable solar infrastructure designed to drive efficiency and lower operational costs for your company.",
   },
   {
     id: 4,
+    image: image4,
+    tag: "Advanced Technology",
+    headline: "Precision\nEngineered",
+    sub: "Every cell is designed for maximum efficiency — cutting-edge photovoltaic technology that delivers peak performance.",
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1080&h=1920&q=80",
+    tag: "Clean Energy",
+    headline: "Powering the\nFuture",
+    sub: "Harnessing the power of the sun to create sustainable energy solutions for generations to come.",
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1080&h=1920&q=80",
+    tag: "Residential Solutions",
+    headline: "Smart Homes\nSmart Power",
+    sub: "Transform your roof into a powerhouse. Reduce your carbon footprint and your energy bills.",
+  },
+  {
+    id: 7,
+    image: "https://images.unsplash.com/photo-1584226761916-3fd67ab5ac3a?auto=format&fit=crop&w=1080&h=1920&q=80",
+    tag: "Commercial Solar",
+    headline: "Empowering\nBusinesses",
+    sub: "Scalable solar infrastructure designed to drive efficiency and lower operational costs for your company.",
+  },
+  {
+    id: 8,
     image: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1080&h=1920&q=80",
     tag: "Sustainable Vision",
     headline: "A Brighter\nTomorrow",
