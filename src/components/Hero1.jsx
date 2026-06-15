@@ -133,7 +133,7 @@ export default function Hero1() {
   const slide = slides[current];
 
   return (
-    <section
+    <section id="home"
       className="relative w-full overflow-hidden bg-stone-900"
       style={{ height: "100svh", minHeight: "580px", fontFamily: "'Cormorant Garamond', Georgia, serif" }}
       onMouseEnter={() => setPaused(true)}
