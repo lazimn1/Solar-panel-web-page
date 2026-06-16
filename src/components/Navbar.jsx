@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav aria-label="Main navigation" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
         ? 'bg-gradient-to-r from-black/60 via-blue-950/80 to-black/60 backdrop-blur border-b border-white/10 shadow-lg'
         : 'backdrop-blur-sm  bg-black/60 border-b border-transparent'

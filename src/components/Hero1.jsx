@@ -11,6 +11,7 @@ const slides = [
     tag: "Residential Solutions",
     headline: "Smart Homes\nSmart Power",
     sub: "Transform your roof into a powerhouse. Reduce your carbon footprint and your energy bills.",
+    alt: "Residential solar panel installation on a Kerala home by AM SOLAR WORLD",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const slides = [
     tag: "Clean Energy",
     headline: "Powering the\nFuture",
     sub: "Harnessing the power of the sun to create sustainable energy solutions for generations to come.",
+    alt: "Large-scale solar farm generating clean renewable energy in Kerala",
   },
 
   {
@@ -26,6 +28,7 @@ const slides = [
     tag: "Commercial Solar",
     headline: "Empowering\nBusinesses",
     sub: "Scalable solar infrastructure designed to drive efficiency and lower operational costs for your company.",
+    alt: "Commercial rooftop solar panel system installed by AM SOLAR WORLD",
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const slides = [
     tag: "Advanced Technology",
     headline: "Precision\nEngineered",
     sub: "Every cell is designed for maximum efficiency — cutting-edge photovoltaic technology that delivers peak performance.",
+    alt: "Close-up of high-efficiency monocrystalline solar panel cells",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const slides = [
     tag: "Clean Energy",
     headline: "Powering the\nFuture",
     sub: "Harnessing the power of the sun to create sustainable energy solutions for generations to come.",
+    alt: "Sunset view of solar panels generating sustainable energy",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ const slides = [
     tag: "Residential Solutions",
     headline: "Smart Homes\nSmart Power",
     sub: "Transform your roof into a powerhouse. Reduce your carbon footprint and your energy bills.",
+    alt: "Solar panels on residential rooftop powering a smart home",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const slides = [
     tag: "Commercial Solar",
     headline: "Empowering\nBusinesses",
     sub: "Scalable solar infrastructure designed to drive efficiency and lower operational costs for your company.",
+    alt: "Commercial solar power installation for businesses in Kerala",
   },
   {
     id: 8,
@@ -61,6 +68,7 @@ const slides = [
     tag: "Sustainable Vision",
     headline: "A Brighter\nTomorrow",
     sub: "Committed to innovation and excellence in renewable energy technology.",
+    alt: "Modern solar energy technology for a sustainable future",
   },
 ];
 
@@ -151,7 +159,7 @@ export default function Hero1() {
         >
           <img
             src={s.image}
-            alt={s.tag}
+            alt={s.alt}
             className="w-full h-full object-cover"
             style={{
               transform: i === current && !animating ? "scale(1.04)" : "scale(1)",
@@ -188,11 +196,11 @@ export default function Hero1() {
           </div>
 
           {/* Headline */}
-          <h2
+          <h1
             className="text-[clamp(42px,7vw,96px)] font-normal text-white leading-[0.92] mb-5 whitespace-pre-line"
           >
             {slide.headline}
-          </h2>
+          </h1>
 
           {/* Subtext */}
           <p

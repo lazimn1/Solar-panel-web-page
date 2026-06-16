@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://amsolarworld.vercel.app/sitemap.xml
+
+# Disallow admin/private paths (none currently, but reserved)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay (optional, be friendly to smaller servers)
+Crawl-delay: 1
