@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
-import image1 from '../assets/solar-installation.png';
-import image2 from '../assets/solar-farm.png';
-import image3 from '../assets/solar-rooftop.png';
-import image4 from '../assets/solar-closeup.png';
+import image1 from '../assets/solar-installation.webp';
+import image2 from '../assets/solar-farm.webp';
+import image3 from '../assets/solar-rooftop.webp';
+import image4 from '../assets/solar-closeup.webp';
 
 const slides = [
   {

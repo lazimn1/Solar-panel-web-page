@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Sun, Menu, X, Phone } from 'lucide-react';
-import logo from '../assets/Company-Logo.png';
+import logo from '../assets/Company-Logo.webp';
 
 const navLinks = [
   { label: 'Home', href: '#home' },

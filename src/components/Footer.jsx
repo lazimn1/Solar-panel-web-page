@@ -1,5 +1,5 @@
 import { Sun, Globe, Share2, Mail, Phone, Zap, ArrowRight } from 'lucide-react';
-import logo from '../assets/Company-Logo.png';
+import logo from '../assets/Company-Logo.webp';
 
 const footerLinks = {
   Solutions: ['Residential Solar', 'Commercial Solar', 'Industrial Solar', 'Battery Storage', 'EV Charging', 'Solar Consulting'],
