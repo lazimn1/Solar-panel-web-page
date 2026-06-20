@@ -55,9 +55,9 @@ export default function Navbar() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <a href="tel:+18005678910" className="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold">
+            <a href="tel:+918113032006" className="hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold">
               <Phone className="w-4 h-4" />
-              <span>1-800-878588</span>
+              <span>8113-032-006</span>
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -83,6 +83,10 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a href="tel:+918113032006" className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-200 transition-colors text-sm font-semibold bg-blue-950 rounded-lg p-2">
+              <Phone className="w-4 h-4" />
+              <span>8113-032-006</span>
+          </a>
         </div>
       </div>
     </nav>

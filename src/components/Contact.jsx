@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin, Send, CheckCircle, ArrowRight } from 'lucide-react
 
 // Added 'href' fields for actionable links (tel: and mailto:)
 const contactInfo = [
-  { icon: Phone, label: 'Call Us', value: '1-800-SOLAR (765-27)', sub: 'Mon–Sat, 8am–8pm', href: 'tel:180076527' },
-  { icon: Mail, label: 'Email Us', value: 'hello@solarvolt.com', sub: 'Response within 2 hours', href: 'mailto:hello@solarvolt.com' },
+  { icon: Phone, label: 'Call Us', value: '8113-032-006', sub: 'Mon–Sat, 8am–8pm', href: 'tel:+918113032006' },
+  { icon: Mail, label: 'Email Us', value: 'lazimkhadern@gmail.com', sub: 'Response within 2 hours', href: 'mailto:lazimkhadern@gmail.com' },
   { icon: MapPin, label: 'Location', value: 'Wandoor, Malappuram, Kerala 679328', sub: 'Just Visit' },
 ];
 
